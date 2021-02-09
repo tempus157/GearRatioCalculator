@@ -3,14 +3,35 @@
 namespace GearRatioCalculator {
     internal static class Program {
         private const string Name = "GearRatioCalculator.exe";
+        private const string Format = "0.00";
+
+        private const int MinCount = 2;
+        private const int MaxCount = 10;
+        private const double MinRatio = 0.48;
+        private const double MaxRatio = 6;
 
         private static void Main(string[] args) {
-            if (args.Length < 3) {
+            try {
+                WriteResult(int.Parse(args[0]), double.Parse(args[1]), double.Parse(args[2]));
+            }
+            catch {
                 WriteHelp();
-                return;
+            }
+        }
+
+        private static void WriteResult(int count, double first, double last) {
+            if (count < MinCount || count > MaxCount ||
+                first < MinRatio || first > MaxRatio || last < MinRatio || last > MaxRatio) {
+                throw new ArgumentOutOfRangeException();
             }
 
-            Console.WriteLine("Hello, world!");
+            var width = count.ToString().Length;
+            var value = (first / last - 1) / (count - 1);
+
+            for (var i = 0; i < count; i++) {
+                var ratio = Math.Round(first / (1 + value * i), 2);
+                Console.WriteLine($"{(i + 1).ToString().PadLeft(width)}: {ratio.ToString(Format)}");
+            }
         }
 
         private static void WriteHelp() {
