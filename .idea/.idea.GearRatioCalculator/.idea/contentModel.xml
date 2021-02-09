@@ -8,6 +8,7 @@
       <e p="GearRatioCalculator.csproj" t="IncludeRecursive" />
       <e p="GearRatioCalculator.sln" t="IncludeFlat" />
       <e p="global.json" t="Include" />
+      <e p="LICENSE.md" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -17,6 +18,7 @@
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
+      <e p="README.md" t="Include" />
     </e>
   </component>
 </project>
