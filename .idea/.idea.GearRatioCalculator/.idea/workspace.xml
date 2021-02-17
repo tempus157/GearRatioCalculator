@@ -26,7 +26,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+<<<<<<< Updated upstream
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunManager">
     <configuration name="GearRatioCalculator" type="DotNetProject" factoryName=".NET Project">
