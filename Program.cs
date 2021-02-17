@@ -29,7 +29,7 @@ namespace GearRatioCalculator {
             var value = (first / last - 1) / (count - 1);
 
             for (var i = 0; i < count; i++) {
-                var ratio = Math.Round(first / (1 + value * i), 2);
+                var ratio = Math.Ceiling(first / (1 + value * i) * 100) / 100;
                 Console.WriteLine($"{(i + 1).ToString().PadLeft(width)}: {ratio.ToString(Format)}");
             }
         }
